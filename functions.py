@@ -4,7 +4,7 @@ import pprint  # Module that allows you print complicated data in a more readabl
 baseurl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 
 
-def getWordInfo(word):
+def get_word_info(word):
     general_query = baseurl + word
 
     try:
@@ -23,4 +23,4 @@ def getWordInfo(word):
         print("Failed to reach server.")
         print("Error reason:  " + err.reason)
 
-getWordInfo("hello")
+get_word_info("hello")
