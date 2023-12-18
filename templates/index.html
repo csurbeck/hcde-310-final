@@ -1,0 +1,16 @@
+ <!-- Template containing the form  -->
+{% extends "base.html" %}
+{% block title %}
+Index
+{% endblock %}
+{% block content %}
+<div id="search-box">
+    <form action='{{url_for("results")}}' method="post">
+        <p>
+            Click the button below to generate a random quote, and receive information about
+            the longest word in the quote.
+        </p>
+        <p><input id="submit-btn" type="submit" value="GENERATE QUOTE"></p>
+    </form>
+</div>
+{% endblock %}

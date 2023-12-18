@@ -1,0 +1,28 @@
+<!-- Template for showing the results. -->
+
+<!--
+    If you are not sure how to loop through
+    a list inside a template, take a look at
+    the first example in this page:
+    https://palletsprojects.com/p/jinja/
+-->
+
+<!-- Template containing the form  -->
+{% extends "base.html" %}
+{% block title %}
+Results
+{% endblock %}
+{% block content %}
+    <div id="result-box">
+        <div>
+            <p id="quote">{{quote}}</p>
+            <p id="quote-author">Author: {{speaker}}</p>
+        </div>
+            <p>{{quote_longest_word}}</p>
+            <div id="definitions">
+                {% for definition in longest_word_info %}
+                <p>{{definition[0]}}: {{definition[1]}}</p>
+                {% endfor %}
+            </div>
+    </div>
+{% endblock %}

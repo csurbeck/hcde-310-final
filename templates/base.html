@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+        rel="stylesheet"
+        href='{{url_for("static", filename="style.css")}}'
+    />
+    <title>QuoteVocab</title>
+</head>
+<body>
+    <h1 id="main-title">Learn about a new quote</h1>
+        {% block content %}{% endblock %}
+        <footer>Data from <a href="https://dictionaryapi.dev/">Free Dictionary API</a> and <a href="https://api-ninjas.com/api/quotes">Quotes API</a></footer>
+</body>
+</html>
